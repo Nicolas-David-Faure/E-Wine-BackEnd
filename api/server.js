@@ -23,9 +23,9 @@ app.use(
   })
 );
 
-// app.use("/", routes);
+app.use("/", routes);
 
-db.sync({ force: true })
+db.sync({ force: false })
   .then(() => {
     app.listen(port, () => console.log(`listening on port ${port}`));
   })
