@@ -17,15 +17,15 @@ app.use(cookieParser());
 
 app.use(
   cors({
-    origin: "http://localhost:8000",
+    origin: "http://localhost:5173",
     methods: ["GET", "POST", "DELETE", "OPTIONS"],
     credentials: true,
   })
 );
 
-// app.use("/", routes);
+app.use("/", routes);
 
-db.sync({ force: true })
+db.sync({ force: false })
   .then(() => {
     app.listen(port, () => console.log(`listening on port ${port}`));
   })

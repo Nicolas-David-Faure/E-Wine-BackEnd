@@ -9,7 +9,7 @@ Wine.init(
       type: S.STRING,
       allowNull: false,
     },
-    wineType: {
+    wine_type: {
       type: S.STRING,
       allowNull: false,
     },
