@@ -22,6 +22,7 @@ Wine.init(
       defaultValue: "", // aca despues ponemos una foto cualquiera
     },
     price: {
+      //esto es un decimal
       type: S.INTEGER,
       allowNull: false,
     },
@@ -38,6 +39,7 @@ Wine.init(
       defaultValue: "",
     },
     review: {
+      //esto es un array
       type: S.TEXT,
       defaultValue: "",
     },
