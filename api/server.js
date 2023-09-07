@@ -7,7 +7,9 @@ const cors = require("cors");
 const db = require("./db/index");
 const routes = require("./routes");
 const models = require("./models");
+const { seeder } = require("./helpers/sedear");
 
+seeder();
 const port = 8080;
 
 app.use(morgan("tiny")); // version simplificada de morgan
@@ -24,7 +26,6 @@ app.use(
 );
 
 app.use("/api", routes);
-
 
 db.sync({ force: false })
   .then(() => {
