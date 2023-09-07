@@ -15,11 +15,11 @@ Wine.init(
     },
     grape: {
       type: S.STRING,
-      defaultValue: "",
+      allowNull: false,
     },
     image: {
       type: S.STRING,
-      defaultValue: "", // aca despues ponemos una foto cualquiera
+      allowNull: false, // aca despues ponemos una foto cualquiera
     },
     price: {
       //esto es un decimal
@@ -28,20 +28,18 @@ Wine.init(
     },
     description: {
       type: S.TEXT,
-      defaultValue: "",
+      allowNull: false,
     },
     rating: {
       type: S.DECIMAL, // chequear
-      defaultValue: 0,
     },
     winery: {
       type: S.STRING,
-      defaultValue: "",
+      allowNull: false,
     },
     review: {
       //esto es un array
       type: S.TEXT,
-      defaultValue: "",
     },
   },
   { sequelize: db, modelName: "wines" }
