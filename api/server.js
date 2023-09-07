@@ -23,7 +23,8 @@ app.use(
   })
 );
 
-app.use("/", routes);
+app.use("/api", routes);
+
 
 db.sync({ force: false })
   .then(() => {
