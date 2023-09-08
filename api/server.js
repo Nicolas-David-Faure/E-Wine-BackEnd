@@ -9,7 +9,7 @@ const routes = require("./routes");
 const models = require("./models");
 const { seeder } = require("./helpers/sedear");
 
-// seeder();
+//seeder();
 const port = 8080;
 
 app.use(morgan("tiny")); // version simplificada de morgan
