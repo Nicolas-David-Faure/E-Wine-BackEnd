@@ -26,9 +26,4 @@ Cart.init(
   { sequelize: db, modelName: "carts" }
 );
 
-Cart.addHook("beforeBulkUpdate", (content) => {
-  console.log("ESTOY EN HOOK", content);
-  return content.amount + 1000;
-});
-
 module.exports = Cart;
