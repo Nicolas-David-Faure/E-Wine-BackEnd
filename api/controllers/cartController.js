@@ -8,7 +8,7 @@ exports.getAllCarts = async (req, res) => {
       carrito.map(async (item) => {
         const { ...info } = await item.getWine();
         const {
-          dataValues: { id, image, price, winery, wine_type, grape },
+          dataValues: { id, image, price, winery, wine_type, grape, name },
         } = info;
         const {
           dataValues: { amount, count },
@@ -23,6 +23,7 @@ exports.getAllCarts = async (req, res) => {
           grape,
           amount,
           count,
+          name,
         };
         return infoCart;
       })
