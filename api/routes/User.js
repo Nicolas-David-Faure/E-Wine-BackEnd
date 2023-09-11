@@ -2,7 +2,6 @@ const express = require("express");
 const router = express.Router();
 const { checkEmail } = require("../middleware/checkDuplicateEmail");
 const { updateUser, addUser } = require("../controllers/adminController");
-
 const { validateUser } = require("../middleware/auth");
 const {
   loginUser,
