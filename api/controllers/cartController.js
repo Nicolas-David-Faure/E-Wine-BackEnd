@@ -15,6 +15,7 @@ exports.getAllCarts = async (req, res) => {
         } = item;
         const infoCart = {
           id,
+          date: item.createdAt,
           image,
           price,
           winery,
@@ -23,12 +24,16 @@ exports.getAllCarts = async (req, res) => {
           amount,
           count,
         };
-
         return infoCart;
       })
     );
 
-    res.status(201).send(carts);
+    //ordenar
+    const order_by = carts.sort((a, b) => {
+      return a.date - b.date;
+    });
+
+    res.status(200).send(order_by);
   } catch (error) {
     res.sendStatus(500);
   }
@@ -50,31 +55,35 @@ exports.addCartPrice = async (req, res) => {
       amount: price,
     },
   });
-  if (!user) return res.sendStatus(404);
+  if (!user) return res.sendStatus(400);
   const [page, status] = user;
+
   if (!status) {
     if (operation) {
       const task = await page.increment({ count: 1, amount: price });
-      if (!task) res.sendStatus(404);
+      if (!task) res.sendStatus(400);
       res.status(201).send("Product added and price increased");
     } else {
-      const task = await page.decrement({ count: 1, amount: price });
-      if (!task) res.sendStatus(404);
-      res.status(201).send("Product removed and price reduction");
+      if (page.count > 1) {
+        const task = await page.decrement({ count: 1, amount: price });
+        if (!task) res.sendStatus(400);
+        res.status(201).send("Product removed and price reduction");
+      }
     }
   } else {
     res.sendStatus(200);
   }
 };
 exports.deleteCart = async (req, res) => {
-  const { wineId } = req.params;
-  const { email } = req.body;
+  const { wineId, email } = req.params;
+  console.log(email);
+
   const user = await User.findOne({ where: { email } });
-  if (!user) return res.status(404).send("Mail not found");
+  if (!user) return res.status(401).send("Mail not found");
 
   const delete_cart = await Cart.destroy({
     where: { userId: user.id, wineId: wineId },
   });
-  if (delete_cart != 1) return res.status(404).send("There is no elimination");
+  if (delete_cart != 1) return res.status(405).send("There is no elimination");
   res.status(200).send("Cart deleted");
 };

@@ -29,7 +29,7 @@ exports.addWine = async (req, res) => {
     Wine.create(req.body);
     res.send(201);
   } catch (error) {
-    res.status(400).send("Error en la creación del item"); // modificar a ingles despues
+    res.status(500).send("Error en la creación del item"); // modificar a ingles despues
   }
 };
 
@@ -38,9 +38,9 @@ exports.deleteWine = async (req, res) => {
   const id = req.params.id;
   try {
     Wine.destroy({ where: { id } });
-    res.send(204);
+    res.send(200);
   } catch (error) {
-    res.status(404).send("Error al eliminar el item"); // modificar a ingles despues
+    res.status(500).send("Error al eliminar el item"); // modificar a ingles despues
   }
 };
 
@@ -52,6 +52,6 @@ exports.updateWine = async (req, res) => {
     await wineToUpdate.update(req.body);
     res.status(200).send(wineToUpdate);
   } catch (error) {
-    res.status(400).send("Error al intentar modificar el item"); // modificar a ingles despues
+    res.status(500).send("Error al intentar modificar el item"); // modificar a ingles despues
   }
 };

@@ -12,6 +12,6 @@ router.get("/", getAllCarts);
 // Ruta para agregar un producto al carrito
 router.post("/:wineId", addCartPrice);
 // Ruta para eliminar un producto del carrito
-router.delete("/:wineId", deleteCart);
+router.delete("/:wineId/:email", deleteCart);
 
 module.exports = router;

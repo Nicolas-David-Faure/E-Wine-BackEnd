@@ -24,7 +24,7 @@ exports.deleteUser = async (req, res) => {
   const { id } = req.params;
   try {
     await User.destroy({ where: { id } });
-    res.status(204).send("Usuario eliminado");
+    res.status(200).send("Usuario eliminado");
   } catch (error) {
     res.status(400).send("Error al intentar eliminar el usuario"); //ver mensaje;
   }
