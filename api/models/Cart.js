@@ -17,12 +17,17 @@ Cart.init(
       type: S.DECIMAL,
       defaultValue: 0,
     },
+    num_cart: {
+      type: S.INTEGER,
+      defaultValue: 1,
+    },
     count: {
       // cantidad de items
       type: S.INTEGER,
       defaultValue: 1,
     },
   },
+
   { sequelize: db, modelName: "carts" }
 );
 

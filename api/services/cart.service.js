@@ -1,4 +1,4 @@
-const { User, Cart } = require("../models");
+const { User, Cart, History } = require("../models");
 
 async function getAllCarts(req) {
   const { email } = req.params;
@@ -56,6 +56,15 @@ async function PostCartCreatedUpDown(req) {
   const { email, price, operation = true } = req.body;
   const user = await User.findOne({ where: { email } });
   if (!user) throw new Error("Error al obtener el usuario");
+  const carts = await Cart.findAll({
+    where: {
+      userId: user.id,
+      state: true,
+    },
+  });
+  const sort = carts.sort((a, b) => a.num_cart - b.num_cart);
+  const num_cart = carts.length == 0 ? 1 : sort[sort.length - 1].num_cart + 1;
+  console.log(sort);
   const usuario = await Cart.findOrCreate({
     where: {
       userId: user.id,
@@ -63,19 +72,26 @@ async function PostCartCreatedUpDown(req) {
     },
     defaults: {
       amount: price,
+      num_cart,
     },
   });
   if (!usuario) throw new Error("Error al buscar o crear un nuevo carrito"); //return res.sendStatus(400);
-  //console.log(usuario);
+
   const [page, status] = usuario;
   if (!status) {
     if (operation) {
-      const task = await page.increment({ count: 1, amount: price });
+      const task = await page.increment({
+        count: 1,
+        amount: price,
+      });
       if (!task) throw new Error("No va a incrementar, error");
       return "increment";
     } else {
       if (page.count > 1) {
-        const task = await page.decrement({ count: 1, amount: price });
+        const task = await page.decrement({
+          count: 1,
+          amount: price,
+        });
         if (!task) throw new Error("No va a decrementar, error");
         return "decrement";
       } else {
