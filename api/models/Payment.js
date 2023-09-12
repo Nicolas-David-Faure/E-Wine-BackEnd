@@ -9,10 +9,10 @@ Payment.init(
       type: S.STRING,
     },
     card_number: {
-      type: S.INTEGER,
+      type: S.BIGINT,
     },
     expire: {
-      type: S.DATE,
+      type: S.STRING,
     },
     cvv: {
       type: S.INTEGER, // codigo de seguridad

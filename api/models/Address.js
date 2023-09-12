@@ -10,29 +10,28 @@ Address.init(
       allowNull: false,
     },
     addressNum: {
-      // monto total
       type: S.INTEGER,
       allowNull: false,
     },
-    depto_piso: {
+    apartment: {
       type: S.STRING,
-      allowNull: false,
+      allowNull: true,
     },
     postal_code: {
       type: S.INTEGER,
       allowNull: false,
     },
-    localidad: {
+    city: {
       type: S.STRING,
       allowNull: false,
     },
-    provincia: {
+    province: {
       type: S.STRING,
       allowNull: false,
     },
-    info_adicional: {
+    more_data: { // por ejemplo si quiere detallar algo extra
       type: S.TEXT,
-      allowNull: false,
+      allowNull: true,
     },
   },
   { sequelize: db, modelName: "address" }
