@@ -1,57 +1,98 @@
-const { Wine } = require("../models");
+const {
+  getAllWines,
+  getWineById,
+  PostaddWine,
+  deleteWineId,
+  updateWineId,
+} = require("../services/wine.service");
 
 // Obtener todos los vinos
 // Esta ruta se puede usar tanto para Administrador como para los usuarios
 exports.getAllWines = async (req, res) => {
   try {
-    const wines = await Wine.findAll();
+    const wines = await getAllWines();
     res.status(200).send(wines);
   } catch (error) {
-    res.status(500).send("Error al obtener vinos"); // Esto modificarlo a ingles despues
+    switch (error.message) {
+      case "There are no wines":
+        res.status(401).send(error.message);
+        break;
+      default:
+        res.status(500).send("Internal server error");
+        break;
+    }
   }
 };
 
 // Obtener vino por Id
 // Esta ruta se puede usar tanto para Administrador como para los usuarios
 exports.getWineById = async (req, res) => {
-  const id = req.params.id;
+  //const id = req.params.id;
   try {
-    const wines = await Wine.findByPk(id);
+    const wines = await getWineById(req);
     res.send(wines);
   } catch (error) {
-    res.status(500).send("Error al obtener un vino"); // Esto modificarlo a ingles despues
+    switch (error.message) {
+      case "There is no such wine":
+        res.status(400).send(error.message);
+        break;
+      default:
+        res.status(500).send("Internal server error");
+        break;
+    }
   }
 };
 
 // Agregar un nuevo vino
 exports.addWine = async (req, res) => {
   try {
-    Wine.create(req.body);
-    res.send(201);
+    PostaddWine(req);
+    res.sendStatus(201);
   } catch (error) {
-    res.status(500).send("Error en la creación del item"); // modificar a ingles despues
+    switch (error.message) {
+      case "Error creating item":
+        res.status(400).send(error.message);
+        break;
+      default:
+        res.status(500).send("Internal server error");
+        break;
+    }
   }
 };
 
 // Eliminar un vino
 exports.deleteWine = async (req, res) => {
-  const id = req.params.id;
   try {
-    Wine.destroy({ where: { id } });
-    res.send(200);
+    await deleteWineId(req);
+    res.sendStatus(200);
   } catch (error) {
-    res.status(500).send("Error al eliminar el item"); // modificar a ingles despues
+    switch (error.message) {
+      case "There is no elimination":
+        res.status(405).send(error.message);
+        break;
+      default:
+        res.status(500).send("Internal server error");
+        break;
+    }
   }
 };
 
 // Actualizar un vino
 exports.updateWine = async (req, res) => {
-  const id = req.params.id;
   try {
-    const wineToUpdate = await Wine.findByPk(id);
-    await wineToUpdate.update(req.body);
-    res.status(200).send(wineToUpdate);
+    const wine = await updateWineId(req);
+    res.status(200).send(wine);
   } catch (error) {
-    res.status(500).send("Error al intentar modificar el item"); // modificar a ingles despues
+    switch (error.message) {
+      case "Wine not found":
+        res.status(405).send(error.message);
+        break;
+      case "Wine not update":
+        res.status(405).send(error.message);
+        break;
+      default:
+        res.status(500).send("Internal server error");
+        break;
+    }
   }
 };
