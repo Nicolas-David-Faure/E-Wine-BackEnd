@@ -1,6 +1,22 @@
 const express = require("express");
 const router = express.Router();
 const { User, Address, Payment } = require("../models");
+const { findOne } = require("../models/User");
+
+router.get("/address/:email", async (req, res) => {
+  try {
+    const { email } = req.params;
+    const user = await User.findOne({ where: { email } });
+    if (!user) {
+      res.status(404).send("Usuario no encontrado");
+    }
+
+    const allAddress = await Address.findAll({ where: { userId: user.id } });
+    res.status(200).send(allAddress);
+  } catch (error) {
+    res.status(500).send(error.message);
+  }
+});
 
 router.post("/address/:email", async (req, res) => {
   try {
