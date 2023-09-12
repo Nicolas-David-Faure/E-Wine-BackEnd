@@ -30,12 +30,12 @@ async function deleteUser(userId) {
   }
 }
 
-async function addUser(userData){
-try {
-  await User.create(userData)
-} catch (error) {
-  throw new Error("Error en la creación del usuario")
-}
+async function addUser(userData) {
+  try {
+    await User.create(userData);
+  } catch (error) {
+    throw new Error("Error en la creación del usuario");
+  }
 }
 
 module.exports = { getAllUsers, updateUser, deleteUser, addUser };

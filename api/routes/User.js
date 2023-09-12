@@ -10,13 +10,9 @@ const {
 } = require("../controllers/userController");
 
 router.put("/:id", updateUser);
-
 router.post("/add", [checkEmail], addUser);
-
 router.post("/login", loginUser);
-
 router.get("/me", validateUser, persistence);
-
 router.post("/logout", logout);
 
 module.exports = router;

@@ -1,4 +1,3 @@
-const { User } = require("../models");
 const {
   getAllUsers,
   updateUser,
@@ -14,6 +13,7 @@ exports.getAllUsers = async (req, res) => {
     switch (error.message) {
       case "Error al obtener los usuarios":
         res.status(404).send(error.message);
+        break;
       default:
         res.sendStatus(500);
         break;
@@ -34,6 +34,7 @@ exports.updateUser = async (req, res) => {
         break;
       case "Error al modificar el usuario":
         res.status(400).send(error.message);
+        break;
       default:
         res.sendStatus(500);
         break;
