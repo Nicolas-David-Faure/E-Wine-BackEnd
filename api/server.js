@@ -9,7 +9,7 @@ const routes = require("./routes");
 const models = require("./models");
 const { seeder } = require("./helpers/sedear");
 
-// seeder();
+//seeder();
 const port = 8080;
 
 app.use(morgan("tiny")); // version simplificada de morgan
@@ -27,7 +27,7 @@ app.use(
 
 app.use("/api", routes);
 
-db.sync({ force: false })
+db.sync({ force: true })
   .then(() => {
     app.listen(port, () => console.log(`listening on port ${port}`));
   })
