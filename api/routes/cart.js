@@ -8,7 +8,7 @@ const {
 } = require("../controllers/cartController");
 
 // Ruta para mostrar los productos del carrito
-router.get("/", getAllCarts);
+router.get("/:email", getAllCarts);
 // Ruta para agregar un producto al carrito
 router.post("/:wineId", addCartPrice);
 // Ruta para eliminar un producto del carrito
