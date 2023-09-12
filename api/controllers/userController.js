@@ -1,12 +1,20 @@
-const { validateUser } = require("../middleware/auth");
-
+const { User } = require("../models");
 const { loginUser } = require("../services/user.service");
 
 exports.loginUser = async (req, res) => {
   const { email, password } = req.body;
 
   try {
-    const result = await loginUser(email, password);
+    const { adminUser, superAdminUser } = await User.findOne({
+      where: {
+        email,
+      },
+    });
+    const result = await loginUser(email, password, adminUser, superAdminUser);
+
+    //result.user["adminUser"] = user.adminUser;
+    //console.log(result.token);
+
     res.cookie("token", result.token);
     res.send(result.user);
   } catch (error) {

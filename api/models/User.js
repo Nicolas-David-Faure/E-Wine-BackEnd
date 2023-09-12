@@ -42,6 +42,10 @@ User.init(
       type: S.BOOLEAN,
       defaultValue: false,
     },
+    superAdminUser: {
+      type: S.BOOLEAN,
+      defaultValue: false,
+    },
   },
   { sequelize: db, modelName: "users" }
 );
