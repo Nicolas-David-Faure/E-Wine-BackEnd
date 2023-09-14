@@ -10,19 +10,24 @@ async function getHistoryByUser(req) {
   const historyWines = await Promise.all(
     histories.map(async (history) => {
       const {
-        dataValues: { id, name, wine_type, grape, image, price, winery },
-      } = await Wine.findOne({
-        where: { id: history.wineId },
-      });
-
-      const { amount, count, num_cart } = history;
-      const obj = {
-        id,
+        amount,
+        count,
+        num_cart,
         name,
         wine_type,
         grape,
         image,
         price,
+        description,
+        winery,
+      } = history;
+      const obj = {
+        name,
+        wine_type,
+        grape,
+        image,
+        price,
+        description,
         winery,
         amount,
         count,

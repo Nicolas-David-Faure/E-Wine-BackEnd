@@ -1,5 +1,5 @@
 const sendEmail = require("../helpers/sendEmail");
-const { User, Cart, History } = require("../models");
+const { User, Cart, History, Wine } = require("../models");
 
 async function getAllCarts(req) {
   const { email } = req.params;
@@ -64,6 +64,9 @@ async function PutCartMoveHistory(req) {
     if (!cartUpdate) throw new Error("No se pudo realizar el put"); //return res.status(404).send("No hay actualizacion");
 
     const { state, amount, num_cart, count, userId, wineId } = cartUpdate;
+    const { name, wine_type, grape, image, price, description, winery } =
+      await Wine.findByPk(wineId);
+
     const createHistory = await History.create({
       state,
       amount,
@@ -71,6 +74,13 @@ async function PutCartMoveHistory(req) {
       count,
       userId,
       wineId,
+      name,
+      wine_type,
+      grape,
+      image,
+      price,
+      description,
+      winery,
     });
 
     if (!createHistory) throw new Error("No se creo historial de carrito"); //return res.status(401).send("No se creo historial de carrito");
@@ -107,7 +117,7 @@ async function PutCartMoveHistory(req) {
   info.push(`<li>Total: $${final_amount}</li>`);
 
   const body_email = info.join("\n").replace(",", "\n");
-  
+
   sendEmail(body_email, name_user, correo);
 
   return carrito;
