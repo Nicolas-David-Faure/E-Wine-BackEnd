@@ -5,6 +5,7 @@ const {
   PostCartCreatedUpDown,
   DeleteCart,
   PutCartMoveHistory,
+
 } = require("../services/cart.service");
 
 exports.getAllCarts = async (req, res) => {
@@ -94,45 +95,6 @@ exports.putCart = async (req, res) => {
     }
   }
 
-  /* const { email } = req.body;
-  const user = await User.findOne({ where: { email } });
-
-  if (!user) return res.status(404).send("No se encontro usuario");
-
-  const carrito = await Cart.findAll({
-    where: { userId: user.id, state: false },
-  });
-
-  if (!carrito)
-    return res.status(404).send("No se encontro producto del carrito");
-
-  carrito.forEach(async (cart) => {
-    const cartUpdate = await cart.update({ state: true });
-    if (!cartUpdate) return res.status(404).send("No hay actualizacion");
-
-    const { state, amount, num_cart, count, userId, wineId } = cartUpdate;
-    const createHistory = await History.create({
-      state,
-      amount,
-      num_cart,
-      count,
-      userId,
-      wineId,
-    });
-
-    if (!createHistory)
-      return res.status(401).send("No se creo historial de carrito");
-    const destroyCart = await Cart.destroy({
-      where: {
-        userId,
-        wineId,
-        num_cart,
-      },
-    });
-    if (destroyCart != 1) return res.status(400).send("No elimino nada");
-  });
-
-  res.send(carrito); */
 };
 exports.deleteCart = async (req, res) => {
   try {

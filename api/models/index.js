@@ -1,13 +1,8 @@
 const User = require("./User");
-
 const Wine = require("./Wine");
-
 const Cart = require("./Cart");
-
 const Address = require("./Address");
-
 const Payment = require("./Payment");
-
 const History = require("./History");
 
 // Relacion con Cart

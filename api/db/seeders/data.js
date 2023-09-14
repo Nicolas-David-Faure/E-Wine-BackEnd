@@ -814,7 +814,7 @@ let info = [
     price: "2456",
     description:
       "Atractivos tonos violáceos. De aromas frutales y florales que recuerdan a violetas. Sabores a frutos rojos como guinda, mora y ciruela acompañados por notas de vainilla, chocolate y ahumados. Sus taninos son suaves lo que lo hacen un vino redondo y de cuerpo medio.",
-    winery: "Navaroo Correas",
+    winery: "Navarro Correas",
   },
   {
     name: "Alegoría Cabernet Sauvignon",
@@ -825,7 +825,7 @@ let info = [
     price: "7591",
     description:
       "De color rojo oscuro con matices rubí. Sabores a ciruelas, cassis (grosella negra), tabaco y notas suaves a pimiento. Con mucho cuerpo, sabor intenso, taninos firmes y elevada persistencia.",
-    winery: "Navaroo Correas",
+    winery: "Navarro Correas",
   },
   {
     name: "Navarro Correas Colección Privada Cabernet Malbec Merlot",
@@ -836,7 +836,7 @@ let info = [
     price: "3162",
     description:
       "De color rojo e intensidad media alta. Se presenta complejo. Notas especiadas y frutadas. La dulzura del Malbec otorga la fruta, el Cabernet Sauvignon se destaca por su cuerpo y el Merlot otorga un final elegante.",
-    winery: "Navaroo Correas",
+    winery: "Navarro Correas",
   },
   {
     name: "Los Arboles Malbec",
@@ -847,7 +847,7 @@ let info = [
     price: "2004",
     description:
       "Aromas a frutillas y ciruelas. De cuerpo medio y taninos suaves. Sabor muy frutado a frutos rojos, fresco y fácil de beber.",
-    winery: "Navaroo Correas",
+    winery: "Navarro Correas",
   },
   {
     name: "Alegoría Malbec",
@@ -858,7 +858,7 @@ let info = [
     price: "7591",
     description:
       "De color intenso violáceo rubí. Sabores y aromas frutados a ciruelas, guindas, trufas y moras. Estructurado con taninos redondos. Excelente equilibrio entre alcohol y acidez. De larga permanencia en boca.",
-    winery: "Navaroo Correas",
+    winery: "Navarro Correas",
   },
   {
     name: "Navarro Correas Reserva Malbec",
@@ -869,7 +869,7 @@ let info = [
     price: "3438",
     description:
       "Brillante, de color rojo violáceo. Aromas a frutos rojos y negros frescos. Notas especiadas a vainilla, cedro tostado, coco, hojas de tabaco y chocolate.",
-    winery: "Navaroo Correas",
+    winery: "Navarro Correas",
   },
   {
     name: "Juan De Dios Blend",
@@ -880,7 +880,7 @@ let info = [
     price: "27659",
     description:
       "Juan de Dios es un vino muy elegante, muy suave, con mucha concentración pero a la vez, es un vino muy delicado, como cuando tocás un terciopelo, este vino te provoca esa misma sensación en la boca.",
-    winery: "Navaroo Correas",
+    winery: "Navarro Correas",
   },
   {
     name: "Navarro Correas Colección Privada Cabernet Sauvignon",
@@ -891,7 +891,7 @@ let info = [
     price: "3162",
     description:
       "De color rojo e intensidad media. Aromas y sabores a frutos rojos y negros como moras acompañadas por notas a pimientos. De cuerpo medio, boca frutada y equilibrado.",
-    winery: "Navaroo Correas",
+    winery: "Navarro Correas",
   },
   {
     name: "Navarro Correas Colección Privada Merlot",
@@ -902,7 +902,7 @@ let info = [
     price: "3162",
     description:
       "De color rojo profundo. Sabores a frutos rojos, frutos secos y notas especiadas. De buena estructura e intensidad y larga permanencia en boca.",
-    winery: "Navaroo Correas",
+    winery: "Navarro Correas",
   },
   {
     name: "Navarro Correas Colección Privada Pinot Noir",
@@ -913,7 +913,7 @@ let info = [
     price: "3162",
     description:
       "De color rojo rubí e intensidad media. Cuerpo medio y estructura aterciopelada. Aromas perfumados y florales, sabores a frutos rojos como frambuesa y fresa.",
-    winery: "Navaroo Correas",
+    winery: "Navarro Correas",
   },
   {
     name: "Navarro Correas Colección Privada Syrah",
@@ -924,7 +924,7 @@ let info = [
     price: "3162",
     description:
       "De color rojo intenso. Presenta buena estructura y cuerpo. Sabores a cerezas negras y frutos negros acompañados con aromas ahumados, especiados y una nota animal (carne).",
-    winery: "Navaroo Correas",
+    winery: "Navarro Correas",
   },
   {
     name: "Navarro Correas Dolores Cabernet Sauvignon",
@@ -935,7 +935,7 @@ let info = [
     price: "2576",
     description:
       "De color rubí intenso, aromas y sabores a grosella, tabaco y moras con notas a hierbas y pimentón. Taninos estructurados, cuerpo medio alto y textura aterciopelada.  Ideal para acompañar platos de cordero con especias y quesos maduros.",
-    winery: "Navaroo Correas",
+    winery: "Navarro Correas",
   },
   {
     name: "Navarro Correas Dolores Malbec",
@@ -946,7 +946,7 @@ let info = [
     price: "2000",
     description:
       "De color rojo intenso, aromas y sabores a violetas, ciruelas, cerezas, frutos rojos y pimienta negra. Taninos firmes y redondos, cuerpo medio alto, muy frutado con gran equilibrio entre alcohol y frescura. Ideal para acompañar carnes asadas, pastas rellenas, risottos y quesos duros o maduros.",
-    winery: "Navaroo Correas",
+    winery: "Navarro Correas",
   },
   {
     name: "Navarro Correas Dolores Red Blend",
@@ -957,7 +957,7 @@ let info = [
     price: "2576",
     description:
       "De color rojo intenso. En nariz se perciben aromas a frutos rojos, ciruelas, moras y pimiento verde. Complejo y equilibrado con taninos intensos y dulces que lo hacen largo en boca.",
-    winery: "Navaroo Correas",
+    winery: "Navarro Correas",
   },
   {
     name: "Navarro Correas Selección del Enólogo Blend",
@@ -968,7 +968,7 @@ let info = [
     price: "11983",
     description:
       "Color: Rojo oscuro, brillante y profundo. Nariz: Aromas y sabores a ciruelas, membrillo, moras, trufas y grafito. Boca: Gran complejidad aromática y taninos redondos, dulces, que aportan una textura sedosa dando un buen relieve en boca. Gran equilibrio entre alcohol, acidez y fruta. De final prolongado.",
-    winery: "Navaroo Correas",
+    winery: "Navarro Correas",
   },
   {
     name: "Structura Ultra",
@@ -979,7 +979,7 @@ let info = [
     price: "19758",
     description:
       "Vino intenso de gran complejidad. Presenta aromas a frutos negros maduros y regaliz, con notas de grafito y especias. Gran cuerpo y final prolongado.",
-    winery: "Navaroo Correas",
+    winery: "Navarro Correas",
   },
   {
     name: "Los Arboles Cabernet Sauvignon",
@@ -990,7 +990,7 @@ let info = [
     price: "2004",
     description:
       "Aromas y sabores a frutos rojos y suaves notas especiadas. De intensidad media y taninos amables. Frutado, muy fresco y fácil de beber.",
-    winery: "Navaroo Correas",
+    winery: "Navarro Correas",
   },
   {
     name: "Navarro Correas Reserva Cabernet Sauvignon",
@@ -1001,7 +1001,7 @@ let info = [
     price: "4427",
     description:
       "Brillante, de color rojo rubí intenso. Aromas y sabores a grosellas, moras, ciruelas y tabaco con notas a hierbas. De textura aterciopelada y final prolongado.",
-    winery: "Navaroo Correas",
+    winery: "Navarro Correas",
   },
   {
     name: "Alegoría Chardonnay",
@@ -1012,7 +1012,7 @@ let info = [
     price: "7591",
     description:
       "Amarillo con reflejos dorados, presenta atractivos aromas a damascos, peras, manzanas, frutas tropicales y delicadas notas especiadas de vainilla y clavo de olor. Su sabor es fresco, frutado e intenso, de textura untuosa y largo final de boca. La selección de los mejores racimos y su lenta fermentación en barricas nuevas de roble francés, hacen que este vino presente gran complejidad.",
-    winery: "Navaroo Correas",
+    winery: "Navarro Correas",
   },
   {
     name: "Navarro Correas Colección Privada Chardonnay",
@@ -1023,7 +1023,7 @@ let info = [
     price: "3162",
     description:
       "De color amarillo intenso, con tintes verdosos. Se destaca el durazno blanco, flor de azahar, miel y notas muy suaves a vainilla. Fresco, frutado y con buen cuerpo. Resaltan los sabores a damascos y cítricos con muy buena untuosidad.",
-    winery: "Navaroo Correas",
+    winery: "Navarro Correas",
   },
   {
     name: "Navarro Correas Dolores Chardonnay",
@@ -1034,7 +1034,7 @@ let info = [
     price: "2576",
     description:
       "Vino de color amarillo dorado, brillante.  De aroma y sabor a duraznos, damascos, peras y un sutil toque de vainilla, proporcionado por el roble. Se percibe muy agradable en el paladar, con textura sedosa.  Ideal para maridar con pescados, mariscos, pastas con salsas cremosas, quesos semi- duros y duros.",
-    winery: "Navaroo Correas",
+    winery: "Navarro Correas",
   },
   {
     name: "Los Arboles Chardonnay",
@@ -1045,7 +1045,7 @@ let info = [
     price: "2004",
     description:
       "De color amarillo dorado. Chenin aporta aromas florales y chardonnay sabores frutales. De cuerpo medio y  final fresco y frutado.",
-    winery: "Navaroo Correas",
+    winery: "Navarro Correas",
   },
   {
     name: "Navarro Correas Reserva Chardonnay",
@@ -1056,7 +1056,7 @@ let info = [
     price: "3438",
     description:
       "Amarillo dorado brillante. Aromas y sabores a duraznos, damascos, peras y notas suaves de vainilla. De textura sedosa y sabor persistente.",
-    winery: "Navaroo Correas",
+    winery: "Navarro Correas",
   },
   {
     name: "Alambrado Cabernet Sauvignon",
