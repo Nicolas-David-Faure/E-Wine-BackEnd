@@ -23,6 +23,36 @@ History.init(
     wineId: {
       type: S.INTEGER,
     },
+    //info del vino
+    name: {
+      type: S.STRING,
+      allowNull: false,
+    },
+    wine_type: {
+      type: S.STRING,
+      allowNull: false,
+    },
+    grape: {
+      type: S.STRING,
+      allowNull: false,
+    },
+    image: {
+      type: S.STRING,
+      allowNull: false, // aca despues ponemos una foto cualquiera
+    },
+    price: {
+      //esto es un decimal
+      type: S.INTEGER,
+      allowNull: false,
+    },
+    description: {
+      type: S.TEXT,
+      allowNull: false,
+    },
+    winery: {
+      type: S.STRING,
+      allowNull: false,
+    },
   },
   { sequelize: db, modelName: "history" }
 );

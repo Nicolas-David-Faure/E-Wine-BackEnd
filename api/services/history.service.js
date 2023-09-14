@@ -10,12 +10,21 @@ async function getHistoryByUser(req) {
   const historyWines = await Promise.all(
     histories.map(async (history) => {
       const {
-        dataValues: { id, name, wine_type, grape, image, price, winery },
-      } = await Wine.findOne({
-        where: { id: history.wineId },
-      });
+
+        amount,
+        count,
+        num_cart,
+        name,
+        wine_type,
+        grape,
+        image,
+        price,
+        description,
+        winery,
+        createdAt
+      } = history;
+
       
-      const { amount, count, num_cart , createdAt } = history;
 
       const fechaHora = new Date(createdAt);
 
@@ -38,13 +47,14 @@ async function getHistoryByUser(req) {
       // Formatea la fecha y hora
       const fechaHoraFormateada = formateador.format(fechaHora);
 
+
       const obj = {
-        id,
         name,
         wine_type,
         grape,
         image,
         price,
+        description,
         winery,
         amount,
         count,
