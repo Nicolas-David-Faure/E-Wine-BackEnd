@@ -1,9 +1,11 @@
+const { Cart, History, User } = require("../models");
 const {
   getAllCarts,
   getCartsAll,
   PostCartCreatedUpDown,
   DeleteCart,
-} = require("../services/card.service");
+  PutCartMoveHistory,
+} = require("../services/cart.service");
 
 exports.getAllCarts = async (req, res) => {
   try {
@@ -64,6 +66,73 @@ exports.addCartPrice = async (req, res) => {
         break;
     }
   }
+};
+exports.putCart = async (req, res) => {
+  try {
+    const cart = await PutCartMoveHistory(req);
+    res.send(cart);
+  } catch (error) {
+    switch (error.message) {
+      case "No se encontro usuario":
+        res.status(404).send(error.message);
+        break;
+      case "No se encontro producto del carrito":
+        res.status(404).send(error.message);
+        break;
+      case "No se pudo realizar el put":
+        res.status(404).send(error.message);
+        break;
+      case "No se creo historial de carrito":
+        res.status(404).send(error.message);
+        break;
+      case "No se elimino el carrito":
+        res.status(404).send(error.message);
+        break;
+      default:
+        res.status(500).send("Internal server error");
+        break;
+    }
+  }
+
+  /* const { email } = req.body;
+  const user = await User.findOne({ where: { email } });
+
+  if (!user) return res.status(404).send("No se encontro usuario");
+
+  const carrito = await Cart.findAll({
+    where: { userId: user.id, state: false },
+  });
+
+  if (!carrito)
+    return res.status(404).send("No se encontro producto del carrito");
+
+  carrito.forEach(async (cart) => {
+    const cartUpdate = await cart.update({ state: true });
+    if (!cartUpdate) return res.status(404).send("No hay actualizacion");
+
+    const { state, amount, num_cart, count, userId, wineId } = cartUpdate;
+    const createHistory = await History.create({
+      state,
+      amount,
+      num_cart,
+      count,
+      userId,
+      wineId,
+    });
+
+    if (!createHistory)
+      return res.status(401).send("No se creo historial de carrito");
+    const destroyCart = await Cart.destroy({
+      where: {
+        userId,
+        wineId,
+        num_cart,
+      },
+    });
+    if (destroyCart != 1) return res.status(400).send("No elimino nada");
+  });
+
+  res.send(carrito); */
 };
 exports.deleteCart = async (req, res) => {
   try {
