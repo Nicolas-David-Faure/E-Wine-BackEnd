@@ -107,10 +107,7 @@ async function PutCartMoveHistory(req) {
   info.push(`<li>Total: $${final_amount}</li>`);
 
   const body_email = info.join("\n").replace(",", "\n");
-
-  console.log(name_user);
-  console.log(correo);
-  console.log(body_email);
+  
   sendEmail(body_email, name_user, correo);
 
   return carrito;
