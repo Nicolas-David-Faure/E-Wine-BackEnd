@@ -1,3 +1,4 @@
+const { Wine } = require("../models");
 const {
   getAllWines,
   getWineById,
@@ -23,6 +24,30 @@ exports.getAllWines = async (req, res) => {
     }
   }
 };
+exports.getAllWinesTest = async (req, res) => {
+  const { key = "" } = req.params;
+  console.log(key);
+
+  const wines = await Wine.findAll();
+  if (!wines) return res.status(400).send("No se encontraron vinos");
+  if (wines.length == 0) return res.sendStatus(400);
+  let num = 0,
+    pagination = [],
+    obj = {};
+
+  while (wines.length != 0) {
+    num++;
+    if (num > 20) {
+      let data = wines.splice(0, 20);
+      pagination.push(data);
+      num = 1;
+    }
+  }
+  pagination.forEach((e, i) => (obj[`${i + 1}`] = e));
+  const data = obj[key];
+  data.push({ total: pagination.length });
+  res.send(data);
+};
 
 // Obtener vino por Id
 // Esta ruta se puede usar tanto para Administrador como para los usuarios
@@ -46,8 +71,8 @@ exports.getWineById = async (req, res) => {
 // Agregar un nuevo vino
 exports.addWine = async (req, res) => {
   try {
-    PostaddWine(req);
-    res.sendStatus(201);
+    const wine = await PostaddWine(req);
+    res.status(201).send(wine);
   } catch (error) {
     switch (error.message) {
       case "Error creating item":

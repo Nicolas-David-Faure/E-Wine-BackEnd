@@ -1,8 +1,11 @@
+const { Cart, History, User } = require("../models");
 const {
   getAllCarts,
   getCartsAll,
   PostCartCreatedUpDown,
   DeleteCart,
+  PutCartMoveHistory,
+
 } = require("../services/cart.service");
 
 exports.getAllCarts = async (req, res) => {
@@ -64,6 +67,34 @@ exports.addCartPrice = async (req, res) => {
         break;
     }
   }
+};
+exports.putCart = async (req, res) => {
+  try {
+    const cart = await PutCartMoveHistory(req);
+    res.send(cart);
+  } catch (error) {
+    switch (error.message) {
+      case "No se encontro usuario":
+        res.status(404).send(error.message);
+        break;
+      case "No se encontro producto del carrito":
+        res.status(404).send(error.message);
+        break;
+      case "No se pudo realizar el put":
+        res.status(404).send(error.message);
+        break;
+      case "No se creo historial de carrito":
+        res.status(404).send(error.message);
+        break;
+      case "No se elimino el carrito":
+        res.status(404).send(error.message);
+        break;
+      default:
+        res.status(500).send("Internal server error");
+        break;
+    }
+  }
+
 };
 exports.deleteCart = async (req, res) => {
   try {
