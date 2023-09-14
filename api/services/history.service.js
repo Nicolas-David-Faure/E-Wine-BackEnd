@@ -14,8 +14,8 @@ async function getHistoryByUser(req) {
       } = await Wine.findOne({
         where: { id: history.wineId },
       });
-
-      const { amount, count, num_cart } = history;
+      
+      const { amount, count, num_cart , createdAt } = history;
       const obj = {
         id,
         name,
@@ -27,6 +27,7 @@ async function getHistoryByUser(req) {
         amount,
         count,
         num_cart,
+        createdAt
       };
 
       return obj;

@@ -9,7 +9,7 @@ const routes = require("./routes");
 const models = require("./models");
 const { seederWine, seederSuperAdminUser } = require("./helpers/sedear");
 
-seederWine();
+//seederWine();
 seederSuperAdminUser();
 const port = 8080;
 
