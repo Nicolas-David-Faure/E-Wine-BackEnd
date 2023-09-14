@@ -9,8 +9,8 @@ const routes = require("./routes");
 const models = require("./models");
 const { seederWine, seederSuperAdminUser } = require("./helpers/sedear");
 
-seederWine();
-seederSuperAdminUser();
+//seederWine();
+//seederSuperAdminUser();
 const port = 8080;
 
 app.use(morgan("tiny")); // version simplificada de morgan

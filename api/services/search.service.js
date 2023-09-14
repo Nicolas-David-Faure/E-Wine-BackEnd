@@ -2,18 +2,21 @@ const { Wine } = require("../models");
 const { Op } = require("sequelize");
 
 async function searchWinesByName(query) {
-  try {
-    const wines = await Wine.findAll({
-      where: {
-        name: {
-          [Op.iLike]: `%${query}%`,
-        },
+  const wines = await Wine.findAll({
+    where: {
+      name: {
+        [Op.iLike]: `%${query}%`,
       },
-    });
-    return wines;
-  } catch (error) {
-    throw new Error("Error al buscar vinos.");
-  }
+    },
+  });
+  if (wines.length === 0)
+    throw new Error(
+      "No se encontraron vinos que coincidan con los parámetros de búsqueda"
+    );
+
+  if (!wines) throw new Error("Error en la busqueda");
+
+  return wines;
 }
 
 module.exports = { searchWinesByName };

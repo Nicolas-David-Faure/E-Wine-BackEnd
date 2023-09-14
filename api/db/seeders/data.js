@@ -1060,7 +1060,7 @@ let info = [
   },
   {
     name: "Alambrado Cabernet Sauvignon",
-    wine_type: "TInto",
+    wine_type: "Tinto",
     grape: "Cabernet Sauvignon",
     image:
       "https://www.espaciovino.com.ar/media/default/0001/55/thumb_54740_default_medium.jpeg",
@@ -1071,7 +1071,7 @@ let info = [
   },
   {
     name: "Fuzion Alta Malbec",
-    wine_type: "TInto",
+    wine_type: "Tinto",
     grape: "Malbec",
     image:
       "https://www.espaciovino.com.ar/media/default/0001/69/thumb_68547_default_medium.jpeg",
@@ -1082,7 +1082,7 @@ let info = [
   },
   {
     name: "Alambrado Malbec",
-    wine_type: "TInto",
+    wine_type: "Tinto",
     grape: "Malbec",
     image:
       "https://www.espaciovino.com.ar/media/default/0001/55/thumb_54743_default_medium.jpeg",
@@ -1093,7 +1093,7 @@ let info = [
   },
   {
     name: "Santa Julia Reserva Malbec",
-    wine_type: "TInto",
+    wine_type: "Tinto",
     grape: "Malbec",
     image:
       "https://www.espaciovino.com.ar/media/default/0001/55/thumb_54751_default_medium.jpeg",
@@ -1104,7 +1104,7 @@ let info = [
   },
   {
     name: "Santa Julia Malbec",
-    wine_type: "TInto",
+    wine_type: "Tinto",
     grape: "Malbec",
     image:
       "https://www.espaciovino.com.ar/media/default/0001/66/thumb_65731_default_medium.jpeg",
@@ -1115,7 +1115,7 @@ let info = [
   },
   {
     name: "Santa Julia Magna Malbec",
-    wine_type: "TInto",
+    wine_type: "Tinto",
     grape: "Malbec",
     image:
       "https://www.espaciovino.com.ar/media/default/0001/60/thumb_59101_default_medium.jpeg",
@@ -1126,7 +1126,7 @@ let info = [
   },
   {
     name: "Alambrado Bonarda",
-    wine_type: "TInto",
+    wine_type: "Tinto",
     grape: "Bonarda",
     image:
       "https://www.espaciovino.com.ar/media/default/0001/59/thumb_58879_default_medium.jpeg",
@@ -1137,7 +1137,7 @@ let info = [
   },
   {
     name: "Alambrado Cabernet Franc",
-    wine_type: "TInto",
+    wine_type: "Tinto",
     grape: "Cabernet Franc",
     image:
       "https://www.espaciovino.com.ar/media/default/0001/67/thumb_66978_default_medium.jpeg",
@@ -1148,7 +1148,7 @@ let info = [
   },
   {
     name: "Alambrado Malbec 375 ml",
-    wine_type: "TInto",
+    wine_type: "Tinto",
     grape: "Malbec",
     image:
       "https://www.espaciovino.com.ar/media/default/0001/67/thumb_66698_default_medium.jpeg",
@@ -1159,7 +1159,7 @@ let info = [
   },
   {
     name: "El Burro Malbec Natural",
-    wine_type: "TInto",
+    wine_type: "Tinto",
     grape: "Malbec",
     image:
       "https://www.espaciovino.com.ar/media/default/0001/63/thumb_62987_default_medium.jpeg",
@@ -1170,7 +1170,7 @@ let info = [
   },
   {
     name: "Flores Negras Pinot Noir",
-    wine_type: "TInto",
+    wine_type: "Tinto",
     grape: "Pinot Noir",
     image:
       "https://www.espaciovino.com.ar/media/default/0001/62/thumb_61154_default_medium.jpeg",
@@ -1181,7 +1181,7 @@ let info = [
   },
   {
     name: "Fuzion Alta Cabernet Sauvignon",
-    wine_type: "TInto",
+    wine_type: "Tinto",
     grape: "Cabernet Sauvignon",
     image:
       "https://www.espaciovino.com.ar/media/default/0001/69/thumb_68548_default_medium.jpeg",
@@ -1192,7 +1192,7 @@ let info = [
   },
   {
     name: "Gran Alambrado Cabernet Sauvignon",
-    wine_type: "TInto",
+    wine_type: "Tinto",
     grape: "Cabernet Sauvignon",
     image:
       "https://www.espaciovino.com.ar/media/default/0001/65/thumb_64061_default_medium.jpeg",
@@ -1203,7 +1203,7 @@ let info = [
   },
   {
     name: "Gran Alambrado Malbec",
-    wine_type: "TInto",
+    wine_type: "Tinto",
     grape: "Malbec",
     image:
       "https://www.espaciovino.com.ar/media/default/0001/65/thumb_64060_default_medium.jpeg",
@@ -1214,7 +1214,7 @@ let info = [
   },
   {
     name: "Gran Alambrado Malbec Cabernet Sauvignon",
-    wine_type: "TInto",
+    wine_type: "Tinto",
     grape: "Blend",
     image:
       "https://www.espaciovino.com.ar/media/default/0001/65/thumb_64059_default_medium.jpeg",
@@ -1225,7 +1225,7 @@ let info = [
   },
   {
     name: "Innovación Carmenere",
-    wine_type: "TInto",
+    wine_type: "Tinto",
     grape: "Carmenere",
     image:
       "https://www.espaciovino.com.ar/media/default/0001/69/thumb_68138_default_medium.jpeg",
@@ -1236,7 +1236,7 @@ let info = [
   },
   {
     name: "La Vaquita Clarete",
-    wine_type: "TInto",
+    wine_type: "Tinto",
     grape: "Blend",
     image:
       "https://www.espaciovino.com.ar/media/default/0001/69/thumb_68651_default_medium.jpeg",
@@ -1247,7 +1247,7 @@ let info = [
   },
   {
     name: "Santa Julia Cabernet Franc",
-    wine_type: "TInto",
+    wine_type: "Tinto",
     grape: "Cabernet Franc",
     image:
       "https://www.espaciovino.com.ar/media/default/0001/67/thumb_66977_default_medium.jpeg",
@@ -1258,7 +1258,7 @@ let info = [
   },
   {
     name: "Santa Julia Cabernet Sauvignon",
-    wine_type: "TInto",
+    wine_type: "Tinto",
     grape: "Cabernet Sauvignon",
     image:
       "https://www.espaciovino.com.ar/media/default/0001/66/thumb_65730_default_medium.jpeg",
@@ -1269,7 +1269,7 @@ let info = [
   },
   {
     name: "Santa Julia Magna Cabernet Sauvignon",
-    wine_type: "TInto",
+    wine_type: "Tinto",
     grape: "Cabernet Sauvignon",
     image:
       "https://www.espaciovino.com.ar/media/default/0001/60/thumb_59099_default_medium.jpeg",
@@ -1280,7 +1280,7 @@ let info = [
   },
   {
     name: "Santa Julia Magna Corte",
-    wine_type: "TInto",
+    wine_type: "Tinto",
     grape: "Blend",
     image:
       "https://www.espaciovino.com.ar/media/default/0001/60/thumb_59100_default_medium.jpeg",
@@ -1291,7 +1291,7 @@ let info = [
   },
   {
     name: "Santa Julia Malbec 375 ml",
-    wine_type: "TInto",
+    wine_type: "Tinto",
     grape: "Malbec",
     image:
       "https://www.espaciovino.com.ar/media/default/0001/62/thumb_61634_default_medium.jpeg",
@@ -1302,7 +1302,7 @@ let info = [
   },
   {
     name: "Santa Julia Malbec del Mercado",
-    wine_type: "TInto",
+    wine_type: "Tinto",
     grape: "Malbec",
     image:
       "https://www.espaciovino.com.ar/media/default/0001/62/thumb_61635_default_medium.jpeg",
@@ -1313,7 +1313,7 @@ let info = [
   },
   {
     name: "Santa Julia Merlot",
-    wine_type: "TInto",
+    wine_type: "Tinto",
     grape: "Merlot",
     image:
       "https://www.espaciovino.com.ar/media/default/0001/66/thumb_65732_default_medium.jpeg",
@@ -1324,7 +1324,7 @@ let info = [
   },
   {
     name: "Santa Julia Orgánica Malbec",
-    wine_type: "TInto",
+    wine_type: "Tinto",
     grape: "Malbec",
     image:
       "https://www.espaciovino.com.ar/media/default/0001/62/thumb_61636_default_medium.jpeg",
@@ -1335,7 +1335,7 @@ let info = [
   },
   {
     name: "Santa Julia Pinot Noir",
-    wine_type: "TInto",
+    wine_type: "Tinto",
     grape: "Pinot Noir",
     image:
       "https://www.espaciovino.com.ar/media/default/0001/67/thumb_66976_default_medium.jpeg",
@@ -1346,7 +1346,7 @@ let info = [
   },
   {
     name: "Santa Julia Reserva Cabernet Sauvignon",
-    wine_type: "TInto",
+    wine_type: "Tinto",
     grape: "Cabernet Sauvignon",
     image:
       "https://www.espaciovino.com.ar/media/default/0001/55/thumb_54749_default_medium.jpeg",
@@ -1357,7 +1357,7 @@ let info = [
   },
   {
     name: "Santa Julia Reserva Syrah",
-    wine_type: "TInto",
+    wine_type: "Tinto",
     grape: "Syrah",
     image:
       "https://www.espaciovino.com.ar/media/default/0001/55/thumb_54773_default_medium.jpeg",
@@ -1368,7 +1368,7 @@ let info = [
   },
   {
     name: "Santa Julia Reserva Tempranillo",
-    wine_type: "TInto",
+    wine_type: "Tinto",
     grape: "Tempranillo",
     image:
       "https://www.espaciovino.com.ar/media/default/0001/55/thumb_54752_default_medium.jpeg",
@@ -1379,7 +1379,7 @@ let info = [
   },
   {
     name: "Santa Julia Syrah",
-    wine_type: "TInto",
+    wine_type: "Tinto",
     grape: "Syrah",
     image:
       "https://www.espaciovino.com.ar/media/default/0001/66/thumb_65785_default_medium.jpeg",
@@ -1390,7 +1390,7 @@ let info = [
   },
   {
     name: "Santa Julia Tempranillo",
-    wine_type: "TInto",
+    wine_type: "Tinto",
     grape: "Tempranillo",
     image:
       "https://www.espaciovino.com.ar/media/default/0001/66/thumb_65784_default_medium.jpeg",
@@ -1401,7 +1401,7 @@ let info = [
   },
   {
     name: "Tensión La Ribera Cabernet Sauvignon Cabernet Franc",
-    wine_type: "TInto",
+    wine_type: "Tinto",
     grape: "Blend",
     image:
       "https://www.espaciovino.com.ar/media/default/0001/62/thumb_61156_default_medium.jpeg",
@@ -1412,7 +1412,7 @@ let info = [
   },
   {
     name: "Tensión La Ribera Malbec Petit Verdot",
-    wine_type: "TInto",
+    wine_type: "Tinto",
     grape: "Blend",
     image:
       "https://www.espaciovino.com.ar/media/default/0001/62/thumb_61155_default_medium.jpeg",
@@ -1423,18 +1423,18 @@ let info = [
   },
   {
     name: "Tintillo Malbec Bonarda",
-    wine_type: "TInto",
+    wine_type: "Tinto",
     grape: "Blend",
     image:
       "https://www.espaciovino.com.ar/media/default/0001/57/thumb_56370_default_medium.jpeg",
     price: "2338",
     description:
-      "Por su estilo y estructura, se recomienda beber frío. El vino tiene cuerpo pero sus taninos son finos y no sufren las bajas temperaturas. Su aspecto y aromas también son intensos, y en boca despliega toda la gracia del Malbec de Uco (refrescante, frutal y con dejos herbales) con el Bonarda aportando carnosidad y carácter firme. Entre ambos logran dar un tinto voluptuoso, fresco, expresivo y de trago ágil. Es bien fluido pero eso no significa que sea liviano. Y no hace falta estar con el termómetro en la mano, hay que dejarlo en la heladera, sacarlo, servirlo (viene con práctica tapa a rosca) y disfrutarlo.",
+      "Por su estilo y estructura, se recomienda beber frío. El vino tiene cuerpo pero sus taninos son finos y no sufren las bajas temperaturas. Su aspecto y aromas también son intensos, y en boca despliega toda la gracia del Malbec de Uco (refrescante, frutal y con dejos herbales) con el Bonarda aportando carnosidad y carácter firme. Entre ambos logran dar un Tinto voluptuoso, fresco, expresivo y de trago ágil. Es bien fluido pero eso no significa que sea liviano. Y no hace falta estar con el termómetro en la mano, hay que dejarlo en la heladera, sacarlo, servirlo (viene con práctica tapa a rosca) y disfrutarlo.",
     winery: "Santa Julia",
   },
   {
     name: "Santa Julia Reserva Malbec Cabernet Franc",
-    wine_type: "TInto",
+    wine_type: "Tinto",
     grape: "Blend",
     image:
       "https://www.espaciovino.com.ar/media/default/0001/55/thumb_54753_default_medium.jpeg",
