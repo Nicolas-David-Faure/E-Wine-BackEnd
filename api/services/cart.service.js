@@ -5,7 +5,6 @@ async function getAllCarts(req) {
   const { email } = req.params;
   const user = await User.findOne({ where: { email: email } });
   if (!user) throw new Error("Email not found");
-  //console.log(user);
   const carrito = await Cart.findAll({
     where: {
       userId: user.id,
@@ -16,41 +15,40 @@ async function getAllCarts(req) {
 }
 
 async function getCartsAll(results) {
-  try {
-    //const results = await Cart.findAll();
-    const carts = await Promise.all(
-      results.map(async (item) => {
-        const { ...info } = await item.getWine();
-        const {
-          dataValues: { id, image, price, winery, wine_type, grape, name },
-        } = info;
-        const {
-          dataValues: { amount, count },
-        } = item;
-        const infoCart = {
-          id,
-          date: item.createdAt,
-          image,
-          price,
-          winery,
-          wine_type,
-          grape,
-          amount,
-          count,
-          name,
-        };
-        return infoCart;
-      })
-    );
-    //ordenar
-    const order_by = carts.sort((a, b) => {
-      return a.date - b.date;
-    });
-    return order_by;
-  } catch (error) {
-    throw new Error("Error al obtener detalles de los items");
-  }
+  const carts = await Promise.all(
+    results.map(async (item) => {
+      const { ...info } = await item.getWine();
+      const {
+        dataValues: { id, image, price, winery, wine_type, grape, name },
+      } = info;
+      const {
+        dataValues: { amount, count },
+      } = item;
+      const infoCart = {
+        id,
+        date: item.createdAt,
+        image,
+        price,
+        winery,
+        wine_type,
+        grape,
+        amount,
+        count,
+        name,
+      };
+      return infoCart;
+    })
+  );
+  //ordenar
+  const order_by = carts.sort((a, b) => {
+    return a.date - b.date;
+  });
+
+  if (!order_by) throw new Error("Error al obtener detalles de los items");
+
+  return order_by;
 }
+
 async function PutCartMoveHistory(req) {
   const { email } = req.body;
   const user = await User.findOne({ where: { email } });

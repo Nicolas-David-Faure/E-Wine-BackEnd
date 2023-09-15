@@ -5,7 +5,6 @@ const {
   PostCartCreatedUpDown,
   DeleteCart,
   PutCartMoveHistory,
-
 } = require("../services/cart.service");
 
 exports.getAllCarts = async (req, res) => {
@@ -94,7 +93,6 @@ exports.putCart = async (req, res) => {
         break;
     }
   }
-
 };
 exports.deleteCart = async (req, res) => {
   try {
