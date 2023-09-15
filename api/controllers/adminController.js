@@ -54,8 +54,8 @@ exports.deleteUser = async (req, res) => {
 
 exports.addUser = async (req, res) => {
   try {
-    await addUser(req.body);
-    res.sendStatus(201);
+    const newUser = await addUser(req.body);
+    res.status(201).send(newUser);
   } catch (error) {
     switch (error.message) {
       case "Error en la creación del usuario":
