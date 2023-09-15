@@ -1,6 +1,5 @@
 const jwt = require("jsonwebtoken");
 const { SECRET } = require("./env");
-
 const generateToken = (payload) => {
   const token = jwt.sign({ user: payload }, SECRET, { expiresIn: "2h" });
   return token;

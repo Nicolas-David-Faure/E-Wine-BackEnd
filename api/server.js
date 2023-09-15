@@ -3,6 +3,7 @@ const app = express(); // guardar su export en una variable
 const morgan = require("morgan"); // Morgan intercepta todos los requests y loguea un resumen del pedido cada vez que un cliente se comunica con el servidor. Entre otras cosas, loguea el método (los verbos) y la ruta entrante.
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
+require("dotenv").config();
 
 const db = require("./db/index");
 const routes = require("./routes");
