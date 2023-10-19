@@ -41,6 +41,11 @@ Wine.init(
       //esto es un array
       type: S.TEXT,
     },
+      stock:{
+        type: S.INTEGER,
+        allowNull: false,
+        defaultValue: 0
+      }
   },
   { sequelize: db, modelName: "wines" }
 );

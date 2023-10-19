@@ -23,7 +23,7 @@ exports.seederWine = async () => {
   Wine.destroy({ where: {} });
 
   data.forEach((wine) => {
-    const { name, wine_type, grape, image, price, description, winery } = wine;
+    const { name, wine_type, grape, image, price, description, winery, stock } = wine;
     exports.wineCreate = Wine.create({
       name,
       wine_type,
@@ -32,6 +32,7 @@ exports.seederWine = async () => {
       price, // Precio del vino
       description,
       winery,
+      stock
     })
       .then((e) => e)
       .catch((err) => console.log(err));
