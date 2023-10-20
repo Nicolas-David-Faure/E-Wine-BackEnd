@@ -8,6 +8,7 @@ exports.getReviews = async (req, res) => {
       const { review, rating, id } = e;
       const { name, lastname, email } = await e.getUser();
       return { review, rating, name, lastname, email, id_review: id };
+      /* sd */
     });
     const arrayPromises = await Promise.all(items);
     res.send(arrayPromises);
