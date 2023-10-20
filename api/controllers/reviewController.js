@@ -5,9 +5,10 @@ exports.getReviews = async (req, res) => {
   try {
     const reviews = await Reviews.findAll({ where: { wineId } });
     const items = reviews.map(async (e) => {
-      const { review, rating, wineId } = e;
+      const { review, rating, id } = e;
       const { name, lastname, email } = await e.getUser();
-      return { review, rating, name, lastname, email, wineId };
+      return { review, rating, name, lastname, email, id_review: id };
+      /* sd */
     });
     const arrayPromises = await Promise.all(items);
     res.send(arrayPromises);
