@@ -9,6 +9,7 @@ const checkout = require("./checkout");
 const history = require("./history");
 const search = require("./search");
 const category = require("./category");
+const review = require("./reviews");
 
 router.use("/admin", adminUser);
 router.use("/user", user);
@@ -18,5 +19,6 @@ router.use("/checkout", checkout);
 router.use("/history", history);
 router.use("/search", search);
 router.use("/category", category);
+router.use("/review", review);
 
 module.exports = router;
