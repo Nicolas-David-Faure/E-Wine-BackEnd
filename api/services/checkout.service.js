@@ -15,6 +15,7 @@ async function postAddressService(req) {
   const user = await User.findOne({ where: { email } });
   if (!user) throw new Error("Usuario no encontrado"); //404
   const createAddress = await Address.create(address);
+
   if (!createAddress) throw new Error("Error al crear Address"); //400
   const userAddress = await createAddress.setUser(user);
   if (!userAddress) throw new Error("Error al establecer relacion"); //400
